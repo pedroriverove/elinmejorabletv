@@ -1,3 +1,20 @@
 <resources>
     <string name="app_name">ElInmejorableTV</string>
+    <string name="app_logo">App Logo</string>
+    <string name="my_account">MI CUENTA</string>
+    <string name="today_races_count">HOY %s CARRERAS</string>
+    <string name="tab_featured">DESTACADOS</string>
+    <string name="tab_usa">USA</string>
+    <string name="tab_latinamerica">LATINOAMÉRICA</string>
+    <string name="tab_europe">EUROPA</string>
+    <string name="tab_asia">ASIA</string>
+    <string name="starts_at">COMIENZA A LAS</string>
+    <string name="races_count">%s carreras</string>
+    <string name="live_stream">Transmisión en vivo</string>
+    <string name="retry">Reintentar</string>
+    <string name="error_loading_stream">Error al cargar la transmisión</string>
+    <string name="home">Inicio</string>
+    <string name="schedule">Programación</string>
+    <string name="favorites">Favoritos</string>
+    <string name="account">Cuenta</string>
 </resources>

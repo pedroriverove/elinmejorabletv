@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="orange">#FF6403</color>
+    <color name="yellow">#EBBB03</color>
+    <color name="dark_blue">#02333A</color>
+    <color name="white">#FEFEFF</color>
+    <color name="light_gray">#F5F5F5</color>
+    <color name="medium_gray">#D2D0D1</color>
+    <color name="success_green">#28A745</color>
+    <color name="warning_yellow">#FFC107</color>
+    <color name="error_red">#DC3545</color>
+    <color name="black">#FF000000</color>
+</resources>

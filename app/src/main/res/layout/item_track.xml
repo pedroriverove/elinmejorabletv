@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginHorizontal="16dp"
+    android:layout_marginTop="8dp"
+    android:layout_marginBottom="4dp"
+    android:clickable="true"
+    android:focusable="true"
+    app:cardCornerRadius="8dp"
+    app:cardElevation="2dp"
+    app:rippleColor="@color/orange">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp">
+
+        <ImageView
+            android:id="@+id/ivTrackLogo"
+            android:layout_width="64dp"
+            android:layout_height="64dp"
+            android:contentDescription="Logo del hipódromo"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:src="@drawable/placeholder_track" />
+
+        <TextView
+            android:id="@+id/tvTrackName"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="8dp"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:textAppearance="@style/TextAppearance.MaterialComponents.Subtitle1"
+            android:textColor="@color/dark_blue"
+            app:layout_constraintEnd_toStartOf="@+id/ivLiveIndicator"
+            app:layout_constraintStart_toEndOf="@+id/ivTrackLogo"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="Gulfstream Park" />
+
+        <TextView
+            android:id="@+id/tvLocation"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:textAppearance="@style/TextAppearance.MaterialComponents.Body2"
+            android:textColor="@color/orange"
+            app:layout_constraintEnd_toEndOf="@+id/tvTrackName"
+            app:layout_constraintStart_toEndOf="@+id/ivTrackLogo"
+            app:layout_constraintTop_toBottomOf="@+id/tvTrackName"
+            tools:text="Florida, USA" />
+
+        <TextView
+            android:id="@+id/tvStartsAt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="8dp"
+            android:text="@string/starts_at"
+            android:textAppearance="@style/TextAppearance.MaterialComponents.Caption"
+            android:textColor="@color/medium_gray"
+            app:layout_constraintStart_toEndOf="@+id/ivTrackLogo"
+            app:layout_constraintTop_toBottomOf="@+id/tvLocation" />
+
+        <TextView
+            android:id="@+id/tvTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
+            android:textAppearance="@style/TextAppearance.MaterialComponents.Caption"
+            android:textColor="@color/dark_blue"
+            android:textStyle="bold"
+            app:layout_constraintBaseline_toBaselineOf="@+id/tvStartsAt"
+            app:layout_constraintStart_toEndOf="@+id/tvStartsAt"
+            tools:text="3:45 PM" />
+
+        <TextView
+            android:id="@+id/tvRacesCount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:textAppearance="@style/TextAppearance.MaterialComponents.Caption"
+            android:textColor="@color/dark_blue"
+            app:layout_constraintBaseline_toBaselineOf="@+id/tvStartsAt"
+            app:layout_constraintEnd_toEndOf="@+id/tvTrackName"
+            tools:text="12 carreras" />
+
+        <ImageView
+            android:id="@+id/ivLiveIndicator"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:background="@drawable/shape_rounded_card"
+            android:backgroundTint="@color/error_red"
+            android:contentDescription="En vivo"
+            android:padding="4dp"
+            android:src="@drawable/ic_play"
+            android:tint="@color/white"
+            android:visibility="visible"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</com.google.android.material.card.MaterialCardView>
