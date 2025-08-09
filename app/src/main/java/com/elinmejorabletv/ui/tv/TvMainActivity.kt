@@ -10,7 +10,6 @@ import androidx.compose.ui.Modifier
 import androidx.tv.material3.ExperimentalTvMaterial3Api
 import androidx.tv.material3.Surface
 import com.elinmejorabletv.domain.model.Track
-import com.elinmejorabletv.ui.player.VideoPlayerActivity
 import com.elinmejorabletv.ui.theme.ElInmejorableTVTheme
 import com.elinmejorabletv.ui.tv.home.HomeScreen
 
@@ -39,9 +38,13 @@ class TvMainActivity : ComponentActivity() {
     }
 
     private fun navigateToPlayer(track: Track) {
-        val intent = Intent(this, VideoPlayerActivity::class.java).apply {
-            putExtra(VideoPlayerActivity.EXTRA_RTMP_URL, track.rtmpUrl)
-            putExtra(VideoPlayerActivity.EXTRA_TRACK_NAME, track.name)
+        val intent = Intent(this, TvPlayerActivity::class.java).apply {
+            putExtra(TvPlayerActivity.EXTRA_RTMP_URL, track.rtmpUrl)
+            putExtra(TvPlayerActivity.EXTRA_TRACK_NAME, track.name)
+            putExtra(TvPlayerActivity.EXTRA_TRACK_ID, track.trackId)
+            putExtra(TvPlayerActivity.EXTRA_TRACK_STATE, track.state)
+            putExtra(TvPlayerActivity.EXTRA_IS_STREAMING, track.isStreaming)
+            putExtra(TvPlayerActivity.EXTRA_PRIORITY, track.priority)
         }
         startActivity(intent)
     }

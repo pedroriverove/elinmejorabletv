@@ -155,7 +155,6 @@ fun TvPlayerScreen(
             }
         }
 
-        // Track info overlay at the bottom
         if (playbackError == null) {
             Column(
                 modifier = Modifier
